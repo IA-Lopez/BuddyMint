@@ -176,6 +176,15 @@ export default function MintApp() {
         </div>
       )}
 
+      <div className="text-center mt-8">
+        <h2 className="text-xl font-bold mb-4">Benefits for Holders</h2>
+        <ul className="list-disc list-inside text-left">
+          <li><b>EARLY ACCESS</b> to Buddy developments</li>
+          <li><b>Additional EARNINGS</b> on stacking rewards</li>
+          <li><b>LOWER FEES</b></li>
+        </ul>
+      </div>
+
       <div className="text-center mb-6 space-y-3 pt-4">
         <p className="text-lg">
           Mint Price: <span className="font-bold">{contractData.mintPrice} ETN</span>
