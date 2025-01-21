@@ -144,31 +144,30 @@ export default function MintApp() {
         className="w-64 h-64 mb-6 rounded-lg object-cover shadow-lg"
       />
 
+
+      <div className="text-center mb-6 space-y-3">
+        <p className="text-lg">
+          Mint Price: <span className="font-bold">{contractData.mintPrice} ETN</span>
+        </p>
+        <p className="text-lg">
+          Max Supply: <span className="font-bold">{contractData.maxSupply}</span>
+        </p>
+        <p className="text-lg">
+          Total Minted: <span className="font-bold">{contractData.totalSupply}</span>
+        </p>
+        <p className="text-lg">
+          Remaining Mints:{" "}
+          <span className="font-bold">
+            {contractData.maxSupply - contractData.totalSupply}
+          </span>
+        </p>
+      </div>
       {isConnected ? (
         <>
-          <div className="text-center mb-6 space-y-3">
-            <p className="text-lg">
-              Mint Price: <span className="font-bold">{contractData.mintPrice} ETN</span>
-            </p>
-            <p className="text-lg">
-              Max Supply: <span className="font-bold">{contractData.maxSupply}</span>
-            </p>
-            <p className="text-lg">
-              Total Minted: <span className="font-bold">{contractData.totalSupply}</span>
-            </p>
-            <p className="text-lg">
-              Remaining Mints:{" "}
-              <span className="font-bold">
-                {contractData.maxSupply - contractData.totalSupply}
-              </span>
-            </p>
-          </div>
-
           <button
             onClick={handleMint}
-            className={`bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-10 rounded-full shadow-lg ${
-              loading ? "opacity-50 cursor-not-allowed" : ""
-            }`}
+            className={`bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-10 rounded-full shadow-lg ${loading ? "opacity-50 cursor-not-allowed" : ""
+              }`}
             disabled={loading}
           >
             {loading ? "Minting..." : "Mint Your Buddy Pass"}
