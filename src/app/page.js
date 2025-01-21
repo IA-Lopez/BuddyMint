@@ -160,7 +160,7 @@ export default function MintApp() {
         className="w-64 h-64 mb-6 rounded-lg object-cover shadow-lg"
       />
 
-      <div className="text-center mt-8">
+      <div className="text-center mb-8">
         <h2 className="text-xl font-bold mb-4">Benefits for Holders</h2>
         <ul className="list-disc list-inside text-left">
           <li><b>EARLY ACCESS</b> to Buddy developments</li>
