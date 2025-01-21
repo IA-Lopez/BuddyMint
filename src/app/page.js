@@ -105,7 +105,7 @@ export default function MintApp() {
     try {
       setLoading(true);
 
-      const mintPriceInWei = BigInt(contractData.mintPrice * 1e18);
+      const mintPriceInWei = BigInt(Math.round(contractData.mintPrice * 1e18));
       const mintPriceHex = `0x${mintPriceInWei.toString(16)}`;
 
       const mintData = encodeFunctionData({
