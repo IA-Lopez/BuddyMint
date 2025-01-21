@@ -105,7 +105,7 @@ export default function MintApp() {
     try {
       setLoading(true);
 
-      const mintPriceInWei = BigInt(Math.round(contractData.mintPrice * 1e18));
+      const mintPriceInWei = BigInt(Math.round((contractData.mintPrice + 3) * 1e18));
       const mintPriceHex = `0x${mintPriceInWei.toString(16)}`;
 
       const mintData = encodeFunctionData({
@@ -187,7 +187,7 @@ export default function MintApp() {
 
       <div className="text-center mt-2 space-y-3 pt-4">
         <p className="text-lg">
-          Mint Price: <span className="font-bold">{contractData.mintPrice} ETN</span>
+          Mint Price: <span className="font-bold">{contractData.mintPrice + 3} ETN</span>
         </p>
         <p className="text-lg">
           Max Supply: <span className="font-bold">{contractData.maxSupply}</span>
