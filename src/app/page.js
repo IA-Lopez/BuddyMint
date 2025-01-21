@@ -153,12 +153,28 @@ export default function MintApp() {
   }
 
   return (
-    <div className="flex flex-col justify-center items-center min-h-screen bg-gray-900 text-white px-4">
+    <div className="flex flex-col justify-center items-center min-h-screen bg-gray-900 text-white px-4 pt-24">
       <img
         src="https://amaranth-kind-quelea-444.mypinata.cloud/ipfs/bafybeidorqt35zj66zj4zjj5rxcf2cfgatvfmr5m7qassbtm5ozoez5ir4"
         alt="Buddy Platinum Pass"
         className="w-64 h-64 mb-6 rounded-lg object-cover shadow-lg"
       />
+
+      {isConnected ? (
+        <button
+          onClick={handleMint}
+          className={`bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-10 rounded-full shadow-lg ${loading ? "opacity-50 cursor-not-allowed" : ""
+            }`}
+          disabled={loading}
+        >
+          {loading ? "Minting..." : "Mint Your Buddy Pass"}
+        </button>
+      ) : (
+        <div className="flex flex-col justify-center items-center">
+          <p className="mb-4 text-center text-lg">Connect your wallet to mint</p>
+          <ConnectButton />
+        </div>
+      )}
 
       <div className="text-center mb-6 space-y-3">
         <p className="text-lg">
@@ -176,24 +192,10 @@ export default function MintApp() {
             {contractData.maxSupply - contractData.totalSupply}
           </span>
         </p>
+        <p className="text-lg">
+          Max per wallet: <span className="font-bold">3</span>
+        </p>
       </div>
-
-      {isConnected ? (
-        <button
-          onClick={handleMint}
-          className={`bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-10 rounded-full shadow-lg ${
-            loading ? "opacity-50 cursor-not-allowed" : ""
-          }`}
-          disabled={loading}
-        >
-          {loading ? "Minting..." : "Mint Your Buddy Pass"}
-        </button>
-      ) : (
-        <div className="flex flex-col justify-center items-center">
-          <p className="mb-4 text-center text-lg">Connect your wallet to mint</p>
-          <ConnectButton />
-        </div>
-      )}
     </div>
   );
 }
