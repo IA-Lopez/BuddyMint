@@ -160,12 +160,12 @@ export default function MintApp() {
         className="w-64 h-64 mb-6 rounded-lg object-cover shadow-lg"
       />
 
-      <div className="text-center mb-8">
+      <div className="text-center mb-5">
         <h2 className="text-xl font-bold mb-4">Benefits for Holders</h2>
         <ul className="list-disc list-inside text-left">
           <li><b>EARLY ACCESS</b> to Buddy developments</li>
           <li><b>Additional EARNINGS</b> on stacking rewards</li>
-          <li><b>LOWER FEES</b></li>
+          <li><b>LOWER FEES</b> and <b>EXCLUSIVE OPPORTUNITIES</b></li>
         </ul>
       </div>
 
@@ -185,7 +185,7 @@ export default function MintApp() {
         </div>
       )}
 
-      <div className="text-center mb-6 space-y-3 pt-4">
+      <div className="text-center mt-2 space-y-3 pt-4">
         <p className="text-lg">
           Mint Price: <span className="font-bold">{contractData.mintPrice} ETN</span>
         </p>
