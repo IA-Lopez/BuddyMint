@@ -164,7 +164,7 @@ export default function MintApp() {
         <h2 className="text-xl font-bold mb-4">Benefits for Holders</h2>
         <ul className="list-disc list-inside text-left">
           <li><b>EARLY ACCESS</b> to Buddy developments</li>
-          <li><b>Additional EARNINGS</b> on stacking rewards</li>
+          <li><b>Additional EARNINGS</b> on staking rewards</li>
           <li><b>LOWER FEES</b> and <b>EXCLUSIVE OPPORTUNITIES</b></li>
         </ul>
       </div>
@@ -200,9 +200,6 @@ export default function MintApp() {
           <span className="font-bold">
             {contractData.maxSupply - contractData.totalSupply}
           </span>
-        </p>
-        <p className="text-lg">
-          Max per wallet: <span className="font-bold">3</span>
         </p>
       </div>
     </div>
