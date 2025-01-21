@@ -36,7 +36,7 @@ const contractABI = [
   },
 ];
 
-const contractAddress = "0x4a7A6C0dC3adc70F6a706A5d8dEa6d39CDFBd9cE";
+const contractAddress = "0xb879F282a615394Cc6F49cE09aba1567E10a5C10";
 
 export default function MintApp() {
   const { address, isConnected } = useAccount();
