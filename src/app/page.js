@@ -52,7 +52,7 @@ export default function MintApp() {
     async function fetchContractData() {
 
       const client = createPublicClient({
-        chain: { id: 1 }, // Mainnet
+        chain: { id: 52014 }, // Mainnet
         transport: custom(window.ethereum),
       });
 

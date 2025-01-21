@@ -29,5 +29,4 @@ export const config = getDefaultConfig({
   appName: 'Buddy',
   projectId: '91e4298f4ed8aa463e3565e8116a943f',
   chains: [etn],
-  connectors: [],
 });
