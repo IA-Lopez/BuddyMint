@@ -135,9 +135,6 @@ export default function MintApp() {
 
   return (
     <div className="flex flex-col justify-center items-center min-h-screen bg-gray-900 text-white px-4">
-      <h1 className="text-3xl font-extrabold mb-6 text-center text-green-500">
-        Buddy Platinum Pass
-      </h1>
       <img
         src="https://amaranth-kind-quelea-444.mypinata.cloud/ipfs/bafybeidorqt35zj66zj4zjj5rxcf2cfgatvfmr5m7qassbtm5ozoez5ir4"
         alt="Buddy Platinum Pass"
