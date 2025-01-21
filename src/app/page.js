@@ -50,7 +50,6 @@ export default function MintApp() {
 
   useEffect(() => {
     async function fetchContractData() {
-      if (!isConnected) return;
 
       const client = createPublicClient({
         chain: { id: 1 }, // Mainnet
