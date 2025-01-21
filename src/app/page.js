@@ -176,7 +176,7 @@ export default function MintApp() {
         </div>
       )}
 
-      <div className="text-center mb-6 space-y-3">
+      <div className="text-center mb-6 space-y-3 pt-4">
         <p className="text-lg">
           Mint Price: <span className="font-bold">{contractData.mintPrice} ETN</span>
         </p>
