@@ -1,6 +1,5 @@
 import { getDefaultConfig } from '@rainbow-me/rainbowkit';
 
-// Define la red personalizada ETN
 const etn = {
   id: 52014,
   name: 'ETN Network',
@@ -21,6 +20,30 @@ const etn = {
   },
   blockExplorers: {
     default: { name: 'ETN Explorer', url: 'https://blockexplorer.electroneum.com' },
+  },
+};
+
+
+const etnTest = {
+  id: 5201420,
+  name: 'ETN Testnet',
+  network: 'etn',
+  iconBackground: '#fff',
+  nativeCurrency: {
+    name: 'ETN',
+    symbol: 'ETN',
+    decimals: 2,
+  },
+  rpcUrls: {
+    default: {
+      http: ['https://rpc.ankr.com/electroneum_testnet/'],
+    },
+    public: {
+      http: ['https://rpc.ankr.com/electroneum_testnet/'],
+    },
+  },
+  blockExplorers: {
+    default: { name: 'ETN Testnet Explorer', url: 'https://blockexplorer.thesecurityteam.rocks' },
   },
 };
 

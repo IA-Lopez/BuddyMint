@@ -36,7 +36,7 @@ const contractABI = [
   },
 ];
 
-const contractAddress = "0x5b481C649be7EfdeAeBdF72b154b8Fd7326b2186";
+const contractAddress = "0x4a7A6C0dC3adc70F6a706A5d8dEa6d39CDFBd9cE";
 
 export default function MintApp() {
   const { address, isConnected } = useAccount();
@@ -82,7 +82,7 @@ export default function MintApp() {
         });
 
         setContractData({
-          mintPrice: Number(mintPrice) / 1e2,
+          mintPrice: Number(mintPrice) / 1e18,
           maxSupply: Number(maxSupply),
           totalSupply: Number(totalSupply),
         });
