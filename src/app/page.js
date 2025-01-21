@@ -47,10 +47,16 @@ export default function MintApp() {
   });
   const [loading, setLoading] = useState(false);
   const [isFetching, setIsFetching] = useState(true);
+  const [noWallet, setNoWallet] = useState(false);
 
   useEffect(() => {
-    async function fetchContractData() {
+    // Check if wallet is available
+    if (!window.ethereum) {
+      setNoWallet(true);
+      return;
+    }
 
+    async function fetchContractData() {
       const client = createPublicClient({
         chain: { id: 52014 }, // Mainnet
         transport: custom(window.ethereum),
@@ -76,7 +82,7 @@ export default function MintApp() {
         });
 
         setContractData({
-          mintPrice: Number(mintPrice) / 1e2, // Convertir a ETN con 2 decimales
+          mintPrice: Number(mintPrice) / 1e2,
           maxSupply: Number(maxSupply),
           totalSupply: Number(totalSupply),
         });
@@ -99,7 +105,7 @@ export default function MintApp() {
     try {
       setLoading(true);
 
-      const mintPriceInWei = BigInt(contractData.mintPrice * 1e18); // Convertir a wei
+      const mintPriceInWei = BigInt(contractData.mintPrice * 1e2);
       const mintPriceHex = `0x${mintPriceInWei.toString(16)}`;
 
       const mintData = encodeFunctionData({
@@ -129,6 +135,19 @@ export default function MintApp() {
     }
   };
 
+  if (noWallet) {
+    return (
+      <div className="flex justify-center items-center min-h-screen bg-gray-900 text-white px-4">
+        <div className="text-center space-y-4">
+          <h1 className="text-2xl font-bold">Wallet Not Found</h1>
+          <p className="text-lg">
+            Please use a browser with a wallet extension (like MetaMask) or a wallet app on mobile.
+          </p>
+        </div>
+      </div>
+    );
+  }
+
   if (isFetching) {
     return <p className="text-center text-white">Loading contract data...</p>;
   }
@@ -140,7 +159,6 @@ export default function MintApp() {
         alt="Buddy Platinum Pass"
         className="w-64 h-64 mb-6 rounded-lg object-cover shadow-lg"
       />
-
 
       <div className="text-center mb-6 space-y-3">
         <p className="text-lg">
@@ -159,17 +177,17 @@ export default function MintApp() {
           </span>
         </p>
       </div>
+
       {isConnected ? (
-        <>
-          <button
-            onClick={handleMint}
-            className={`bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-10 rounded-full shadow-lg ${loading ? "opacity-50 cursor-not-allowed" : ""
-              }`}
-            disabled={loading}
-          >
-            {loading ? "Minting..." : "Mint Your Buddy Pass"}
-          </button>
-        </>
+        <button
+          onClick={handleMint}
+          className={`bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-10 rounded-full shadow-lg ${
+            loading ? "opacity-50 cursor-not-allowed" : ""
+          }`}
+          disabled={loading}
+        >
+          {loading ? "Minting..." : "Mint Your Buddy Pass"}
+        </button>
       ) : (
         <div className="flex flex-col justify-center items-center">
           <p className="mb-4 text-center text-lg">Connect your wallet to mint</p>
