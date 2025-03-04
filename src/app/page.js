@@ -155,7 +155,7 @@ export default function MintApp() {
   return (
     <div className="flex flex-col justify-center items-center min-h-screen bg-gray-900 text-white px-4 pt-24">
       <img
-        src="https://amaranth-kind-quelea-444.mypinata.cloud/ipfs/bafybeidorqt35zj66zj4zjj5rxcf2cfgatvfmr5m7qassbtm5ozoez5ir4"
+        src="https://static.electroswap.io/images/BPPSquare.webp"
         alt="Buddy Platinum Pass"
         className="w-64 h-64 mb-6 rounded-lg object-cover shadow-lg"
       />
