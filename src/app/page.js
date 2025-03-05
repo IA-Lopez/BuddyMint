@@ -155,7 +155,7 @@ export default function MintApp() {
   return (
     <div className="flex flex-col justify-center items-center min-h-screen bg-gray-900 text-white px-4 pt-24">
       <img
-        src="../../public/buddyPlatinumPass.jpg"
+        src="https://mint.buddybattles.xyz/buddyPlatinumPass.jpg"
         alt="Buddy Platinum Pass"
         className="w-32 h-32 mb-6 rounded-lg object-cover shadow-lg"
       />
