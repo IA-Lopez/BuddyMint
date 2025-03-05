@@ -1,0 +1,11 @@
+{
+  "name": "Buddy Platinum Pass",
+  "description": "The Buddy Platinum Pass grants exclusive benefits to its holders, including early access to Buddy developments, lower fees and additional earnings on stacking rewards.",
+  "image": "https://mint.buddybattles.xyz/buddyPlatinumPass.jpg",
+  "attributes": [
+    {
+      "trait_type": "Access Level",
+      "value": "Platinum"
+    }
+  ]
+}
