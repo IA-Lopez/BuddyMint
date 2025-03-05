@@ -157,7 +157,7 @@ export default function MintApp() {
       <img
         src="https://mint.buddybattles.xyz/buddyPlatinumPass.jpg"
         alt="Buddy Platinum Pass"
-        className="w-32 h-32 mb-6 rounded-lg object-cover shadow-lg"
+        className="w-64 h-64 mb-6 rounded-lg object-cover shadow-lg"
       />
 
       <div className="text-center mb-5">
