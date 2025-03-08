@@ -9,7 +9,6 @@ const Header = () => {
     { name: 'Web', href: 'https://etn.buddybattles.xyz/' },
     { name: 'Battles', href: 'https://app.buddybattles.xyz/' },
     { name: 'Staking', href: 'https://stake.buddybattles.xyz/' },
-    { name: 'NFT', href: 'https://mint.buddybattles.xyz/' },
     { name: 'Airdrop', href: 'https://airdrop.buddybattles.xyz/' },
   ];
 
